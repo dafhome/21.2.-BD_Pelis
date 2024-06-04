@@ -11,6 +11,9 @@ SELECT * FROM peliculas.peliculas ORDER BY title ASC;
 /*Realmente aqui solo muestra una pelicula de cada genero*/
 SELECT * FROM peliculas.peliculas GROUP BY genre;
 
+/*Aquí indicaría cuantas hay de cada genero*/
+SELECT genre , COUNT(*) AS Cantidad_peliculas FROM peliculas.peliculas GROUP BY genre;
+
 /* Ver solo las pelis con recaudación menor que X */
 SELECT * FROM peliculas.peliculas WHERE revenue < 2000000;
 
